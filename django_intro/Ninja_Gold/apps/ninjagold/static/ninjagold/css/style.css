@@ -1,0 +1,36 @@
+body{
+    margin: 0 auto;
+}
+.place{
+    width: 240px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: lightblue;
+    margin: 15px;
+    text-align: center;
+    padding-top: 30px;
+}
+input[type=submit]{
+    border-radius: 5px;
+    background-color: black;
+    color: yellow;  
+}
+.gold{
+    margin-top: 20px;
+}
+li{
+    list-style: none;
+}
+.activity{
+    width: 1050px;
+    height: 300px;
+    margin-left: 20px;
+    background-color: lightgray;
+    overflow: scroll;
+}
+div .reset{
+    display: inline-block;
+    width: 100px;
+}
+

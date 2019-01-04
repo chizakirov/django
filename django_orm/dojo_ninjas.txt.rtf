@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 // Create 3 Dojo locations:\
+\
+>>> Dojo.objects.create(name = "Seattle",city = "Bellevue", state = "WA")\
+<Dojo: Dojo object>\
+>>> Dojo.objects.create(name = "Boise", city = "Boise", state = "ID")\
+<Dojo: Dojo object>\
+>>> Dojo.objects.create(name = "Dallas", city = "Dallas", state = "TX")\
+<Dojo: Dojo object>\
+>>> all = Dojo.objects.all()\
+>>> all.delete()\
+(3, \{'ninjas_app.Ninjas': 0, 'ninjas_app.Dojo': 3\})\
+>>> Dojo.objects.all().values()\
+<QuerySet []>\
+>>> all = Dojo.objects.all()\
+>>> all.delete()\
+(3, \{'ninjas_app.Ninjas': 0, 'ninjas_app.Dojo': 3\})\
+>>> Dojo.objects.all().values()\
+<QuerySet []>\
+>>> Dojo.objects.create(name = "Seattle",city = "Bellevue", state = "WA")\
+<Dojo: Dojo object>\
+>>> Dojo.objects.create(name = "Boise", city = "Boise", state = "ID")\
+<Dojo: Dojo object>\
+>>> Dojo.objects.create(name = "Dallas", city = "Dallas", state = "TX")\
+<Dojo: Dojo object>\
+>>> Dojo.objects.all().values()\
+<QuerySet [\{'id': 4, 'name': 'Seattle', 'city': 'Bellevue', 'state': 'WA', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 12, 48712, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 12, 48832, tzinfo=<UTC>)\}, \{'id': 5, 'name': 'Boise', 'city': 'Boise', 'state': 'ID', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 16, 923288, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 16, 923366, tzinfo=<UTC>)\}, \{'id': 6, 'name': 'Dallas', 'city': 'Dallas', 'state': 'TX', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 21, 207047, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 21, 207125, tzinfo=<UTC>)\}]>\
+\
+// Create 3 ninjas for first Dojo location: \
+\
+>>> first_dojo = Dojo.objects.first()\
+>>> first_dojo\
+<Dojo: Dojo object>\
+>>> ninja1 = Ninjas.objects.create(first_name = "Dorothy", last_name = "Gee", dojo_id = first_dojo)\
+>>> ninja1\
+<Ninjas: Ninjas object>\
+>>> ninja1.__dict__\
+\{'_state': <django.db.models.base.ModelState object at 0x10ee75c18>, 'id': 1, 'first_name': 'Dorothy', 'last_name': 'Gee', 'dojo_id_id': 4, '_dojo_id_cache': <Dojo: Dojo object>, 'created_at': datetime.datetime(2018, 12, 10, 19, 58, 32, 626233, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 58, 32, 626312, tzinfo=<UTC>)\}\
+>>> ninja2 = Ninjas.objects.create(first_name = "Manila", last_name = "Gee", dojo_id =first_dojo)\
+>>> ninja3 = Ninjas.objects.create(first_name = "Calihan", last_name = "Gee", dojo_id = first_dojo)\
+\
+// Retrieve all ninjas from first Dojo location: \
+\
+>>> ninja_group1 = Ninjas.objects.filter(dojo_id = first_dojo)\
+>>> ninja_group1\
+<QuerySet [<Ninjas: Ninjas object>, <Ninjas: Ninjas object>, <Ninjas: Ninjas object>]>\
+>>> ninja_group1.values()\
+<QuerySet [\{'id': 1, 'first_name': 'Dorothy', 'last_name': 'Gee', 'dojo_id_id': 4, 'created_at': datetime.datetime(2018, 12, 10, 19, 58, 32, 626233, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 58, 32, 626312, tzinfo=<UTC>)\}, \{'id': 2, 'first_name': 'Manila', 'last_name': 'Gee', 'dojo_id_id': 4, 'created_at': datetime.datetime(2018, 12, 10, 20, 7, 28, 399865, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 20, 7, 28, 399987, tzinfo=<UTC>)\}, \{'id': 3, 'first_name': 'Calihan', 'last_name': 'Gee', 'dojo_id_id': 4, 'created_at': datetime.datetime(2018, 12, 10, 20, 8, 4, 997651, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 20, 8, 4, 997730, tzinfo=<UTC>)\}]>\
+>>>}

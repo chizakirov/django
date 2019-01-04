@@ -1,0 +1,51 @@
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <title>All Shows</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .form{
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+    </head>
+    <body>
+        <h1>All Shows</h1>
+        <table class = "table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Network</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for show in all_shows %}
+                <tr>
+                    <td>{{show.id}}</td>
+                    <td>{{ show.title }}</td>
+                    <td>{{ show.network }}</td>
+                    <td>{{ show.release_date }}</td>
+                    <td>
+                        <form class = "form" action="/shows/show" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="show" value = "{{show.id}}">
+                            <input type="submit" value="Show">
+                        </form>
+                        <a href = "/shows/{{show.id}}">Show</a>
+                        <a href = "/shows/{{show.id}}/edit">Edit</a>
+                        <a href = "/shows/{{show.id}}/delete">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="/shows/new">Add a New Show</a>
+    </body>
+    </html>

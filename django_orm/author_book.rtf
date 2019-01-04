@@ -1,0 +1,884 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0     inspectdb\
+    loaddata\
+    makemessages\
+    makemigrations\
+    migrate\
+    sendtestemail\
+    shell\
+    showmigrations\
+    sqlflush\
+    sqlmigrate\
+    sqlsequencereset\
+    squashmigrations\
+    startapp\
+    startproject\
+    test\
+    testserver\
+\
+[sessions]\
+    clearsessions\
+\
+[staticfiles]\
+    collectstatic\
+    findstatic\
+    runserver\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py\
+\
+Type 'manage.py help <subcommand>' for help on a specific subcommand.\
+\
+Available subcommands:\
+\
+[auth]\
+    changepassword\
+    createsuperuser\
+\
+[django]\
+    check\
+    compilemessages\
+    createcachetable\
+    dbshell\
+    diffsettings\
+    dumpdata\
+    flush\
+    inspectdb\
+    loaddata\
+    makemessages\
+    makemigrations\
+    migrate\
+    sendtestemail\
+    shell\
+    showmigrations\
+    sqlflush\
+    sqlmigrate\
+    sqlsequencereset\
+    squashmigrations\
+    startapp\
+    startproject\
+    test\
+    testserver\
+\
+[sessions]\
+    clearsessions\
+\
+[staticfiles]\
+    collectstatic\
+    findstatic\
+    runserver\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+December 10, 2018 - 20:57:23\
+Django version 1.10, using settings 'Dojo_Ninjas.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+Internal Server Error: /\
+Traceback (most recent call last):\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner\
+    response = get_response(request)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response\
+    response = self.process_exception_by_middleware(e, request)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Dojo_Ninjas/apps/ninjas_app/views.py", line 4, in index\
+    context = \{"dojos": Dojo.objects.all()\}\
+NameError: name 'Dojo' is not defined\
+[10/Dec/2018 20:57:27] "GET / HTTP/1.1" 500 60368\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+December 10, 2018 - 20:58:41\
+Django version 1.10, using settings 'Dojo_Ninjas.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^C(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py shell\
+Python 3.7.1 (default, Nov  6 2018, 18:45:35)\
+Type 'copyright', 'credits' or 'license' for more information\
+IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.\
+\
+In [1]: from apps.ninjas_app.models import *\
+\
+In [2]: Dojo.objects.all()\
+Out[2]: <QuerySet [<Dojo: Dojo object>, <Dojo: Dojo object>, <Dojo: Dojo object>]>\
+\
+In [3]: Dojo.objects.all().values()\
+Out[3]: <QuerySet [\{'id': 4, 'name': 'Seattle', 'city': 'Bellevue', 'state': 'WA', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 12, 48712, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 12, 48832, tzinfo=<UTC>)\}, \{'id': 5, 'name': 'Boise', 'city': 'Boise', 'state': 'ID', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 16, 923288, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 16, 923366, tzinfo=<UTC>)\}, \{'id': 6, 'name': 'Dallas', 'city': 'Dallas', 'state': 'TX', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 21, 207047, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 21, 207125, tzinfo=<UTC>)\}]>\
+\
+In [4]: python manage.py makemigrations\
+  File "<ipython-input-4-b39a926b2782>", line 1\
+    python manage.py makemigrations\
+                ^\
+SyntaxError: invalid syntax\
+\
+\
+In [5]: python manage.py makemigrations\
+  File "<ipython-input-5-b39a926b2782>", line 1\
+    python manage.py makemigrations\
+                ^\
+SyntaxError: invalid syntax\
+\
+\
+In [6]: ./manage.py makemigrations\
+  File "<ipython-input-6-593f6aab9330>", line 1\
+    ./manage.py makemigrations\
+    ^\
+SyntaxError: invalid syntax\
+\
+\
+In [7]: exit()\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py makemigrations\
+You are trying to add a non-nullable field 'desc' to dojo without a default; we can't do that (the database needs something to populate existing rows).\
+Please select a fix:\
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)\
+ 2) Quit, and let me add a default in models.py\
+Select an option: 1\
+Please enter the default value now, as valid Python\
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now\
+Type 'exit' to exit this prompt\
+>>> "no value"\
+Migrations for 'ninjas_app':\
+  apps/ninjas_app/migrations/0002_dojo_desc.py:\
+    - Add field desc to dojo\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py migrate\
+Operations to perform:\
+  Apply all migrations: admin, auth, contenttypes, ninjas_app, sessions\
+Running migrations:\
+  Rendering model states... DONE\
+  Applying ninjas_app.0002_dojo_desc... OK\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py shell\
+Python 3.7.1 (default, Nov  6 2018, 18:45:35)\
+Type 'copyright', 'credits' or 'license' for more information\
+IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.\
+\
+In [1]: from apps.ninjas_app.models import *\
+\
+In [2]: Dojo.objects.create(name = "NYC", city = "NYC", state = "NY)\
+  File "<ipython-input-2-3b66b9b29212>", line 1\
+    Dojo.objects.create(name = "NYC", city = "NYC", state = "NY)\
+                                                                ^\
+SyntaxError: EOL while scanning string literal\
+\
+\
+In [3]: Dojo.objects.create(name = "NYC", city = "NYC", state = "NY")\
+Out[3]: <Dojo: Dojo object>\
+\
+In [4]: Dojo.objects.all().values()\
+Out[4]: <QuerySet [\{'id': 4, 'name': 'Seattle', 'city': 'Bellevue', 'state': 'WA', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 12, 48712, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 12, 48832, tzinfo=<UTC>), 'desc': 'no value'\}, \{'id': 5, 'name': 'Boise', 'city': 'Boise', 'state': 'ID', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 16, 923288, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 16, 923366, tzinfo=<UTC>), 'desc': 'no value'\}, \{'id': 6, 'name': 'Dallas', 'city': 'Dallas', 'state': 'TX', 'created_at': datetime.datetime(2018, 12, 10, 19, 56, 21, 207047, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 19, 56, 21, 207125, tzinfo=<UTC>), 'desc': 'no value'\}, \{'id': 7, 'name': 'NYC', 'city': 'NYC', 'state': 'NY', 'created_at': datetime.datetime(2018, 12, 10, 21, 32, 3, 392317, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 21, 32, 3, 392636, tzinfo=<UTC>), 'desc': ''\}]>\
+\
+In [5]: exit()\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+December 10, 2018 - 21:32:28\
+Django version 1.10, using settings 'Dojo_Ninjas.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[10/Dec/2018 21:32:32] "GET / HTTP/1.1" 200 465\
+[10/Dec/2018 21:36:16] "GET / HTTP/1.1" 200 709\
+[10/Dec/2018 21:36:18] "GET / HTTP/1.1" 200 709\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+December 10, 2018 - 21:36:49\
+Django version 1.10, using settings 'Dojo_Ninjas.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+Internal Server Error: /\
+Traceback (most recent call last):\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/exception.py", line 39, in inner\
+    response = get_response(request)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 187, in _get_response\
+    response = self.process_exception_by_middleware(e, request)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/handlers/base.py", line 185, in _get_response\
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Dojo_Ninjas/apps/ninjas_app/views.py", line 6, in index\
+    return render(request, "ninjas/index.html", context)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/shortcuts.py", line 30, in render\
+    content = loader.render_to_string(template_name, context, request, using=using)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 67, in render_to_string\
+    template = get_template(template_name, using=using)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/template/loader.py", line 25, in get_template\
+    raise TemplateDoesNotExist(template_name, chain=chain)\
+django.template.exceptions.TemplateDoesNotExist: ninjas/index.html\
+[10/Dec/2018 21:36:52] "GET / HTTP/1.1" 500 75859\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+December 10, 2018 - 21:37:01\
+Django version 1.10, using settings 'Dojo_Ninjas.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[10/Dec/2018 21:40:05] "GET / HTTP/1.1" 200 709\
+[10/Dec/2018 21:43:01] "GET / HTTP/1.1" 200 709\
+[10/Dec/2018 21:43:03] "GET / HTTP/1.1" 200 709\
+[10/Dec/2018 21:44:15] "GET / HTTP/1.1" 200 912\
+[10/Dec/2018 21:44:18] "GET / HTTP/1.1" 200 912\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+December 10, 2018 - 21:45:16\
+Django version 1.10, using settings 'Dojo_Ninjas.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+^?^C(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$\
+(djangoPy3Env) Chis-MacBook-Air:Dojo_Ninjas chinguyen$ cd ..\
+(djangoPy3Env) Chis-MacBook-Air:django_orm chinguyen$ django-admin startproject Author_Book\
+(djangoPy3Env) Chis-MacBook-Air:django_orm chinguyen$ cd Author_Book\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ mkdir apps\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ cd apps\
+(djangoPy3Env) Chis-MacBook-Air:apps chinguyen$ touch urls.py\
+(djangoPy3Env) Chis-MacBook-Air:apps chinguyen$ cd ..\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py runserver\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\
+Run 'python manage.py migrate' to apply them.\
+\
+December 10, 2018 - 21:46:52\
+Django version 1.10, using settings 'Author_Book.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[10/Dec/2018 21:46:55] "GET / HTTP/1.1" 200 1767\
+^C(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ cd apps\
+(djangoPy3Env) Chis-MacBook-Air:apps chinguyen$ django-admin startapp book_app\
+(djangoPy3Env) Chis-MacBook-Air:apps chinguyen$ cd book_app\
+(djangoPy3Env) Chis-MacBook-Air:book_app chinguyen$ touch urls.py\
+(djangoPy3Env) Chis-MacBook-Air:book_app chinguyen$ cd ..\
+(djangoPy3Env) Chis-MacBook-Air:apps chinguyen$ cd ..\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 341, in execute\
+    django.setup()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/apps/book_app/models.py", line 3, in <module>\
+    class Book():\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/apps/book_app/models.py", line 6, in Book\
+    created_at = models.DateTimeField(auto_add_now = True)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1164, in __init__\
+    super(DateField, self).__init__(verbose_name, name, **kwargs)\
+TypeError: __init__() got an unexpected keyword argument 'auto_add_now'\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/fields/related.py", line 1099, in __init__\
+    to._meta\
+AttributeError: type object 'Book' has no attribute '_meta'\
+\
+During handling of the above exception, another exception occurred:\
+\
+Traceback (most recent call last):\
+  File "manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 341, in execute\
+    django.setup()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/__init__.py", line 27, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/registry.py", line 108, in populate\
+    app_config.import_models(all_models)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/apps/config.py", line 199, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/apps/book_app/models.py", line 9, in <module>\
+    class Author():\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/apps/book_app/models.py", line 15, in Author\
+    author = models.ManyToManyField(Book, related_name="authors")\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/db/models/fields/related.py", line 1104, in __init__\
+    (self.__class__.__name__, to, RECURSIVE_RELATIONSHIP_CONSTANT)\
+AssertionError: ManyToManyField(<class 'apps.book_app.models.Book'>) is invalid. First parameter to ManyToManyField must be either a model, a model name, or the string 'self'\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 359, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 305, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 353, in execute\
+    self.check()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check\
+    include_deployment_checks=include_deployment_checks,\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    for pattern in resolver.url_patterns:\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/Author_Book/urls.py", line 16\
+    from django.conf.urls import url, include\
+                                              ^\
+SyntaxError: invalid character in identifier\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 359, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 305, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 353, in execute\
+    self.check()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check\
+    include_deployment_checks=include_deployment_checks,\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    for pattern in resolver.url_patterns:\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/Author_Book/urls.py", line 16\
+    from django.conf.urls import url, include\
+                                              ^\
+SyntaxError: invalid character in identifier\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 22, in <module>\
+    execute_from_command_line(sys.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 367, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/__init__.py", line 359, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 305, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 353, in execute\
+    self.check()\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 385, in check\
+    include_deployment_checks=include_deployment_checks,\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/management/base.py", line 372, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/registry.py", line 81, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver\
+    for pattern in resolver.url_patterns:\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 310, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/utils/functional.py", line 35, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/site-packages/django/urls/resolvers.py", line 303, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/my_environments/djangoPy3Env/lib/python3.7/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/chinguyen/1CODINGDOJO/python_stack/django/django_orm/Author_Book/Author_Book/urls.py", line 16\
+    from django.conf.urls import url, include\
+                                             ^\
+SyntaxError: invalid character in identifier\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Migrations for 'book_app':\
+  apps/book_app/migrations/0001_initial.py:\
+    - Create model Author\
+    - Create model Book\
+    - Add field author to author\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py shell\
+Python 3.7.1 (default, Nov  6 2018, 18:45:35)\
+Type 'copyright', 'credits' or 'license' for more information\
+IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.\
+\
+In [1]: exit()\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py migrate\
+Operations to perform:\
+  Apply all migrations: admin, auth, book_app, contenttypes, sessions\
+Running migrations:\
+  Rendering model states... DONE\
+  Applying contenttypes.0001_initial... OK\
+  Applying auth.0001_initial... OK\
+  Applying admin.0001_initial... OK\
+  Applying admin.0002_logentry_remove_auto_add... OK\
+  Applying contenttypes.0002_remove_content_type_name... OK\
+  Applying auth.0002_alter_permission_name_max_length... OK\
+  Applying auth.0003_alter_user_email_max_length... OK\
+  Applying auth.0004_alter_user_username_opts... OK\
+  Applying auth.0005_alter_user_last_login_null... OK\
+  Applying auth.0006_require_contenttypes_0002... OK\
+  Applying auth.0007_alter_validators_add_error_messages... OK\
+  Applying auth.0008_alter_user_username_max_length... OK\
+  Applying book_app.0001_initial... OK\
+  Applying sessions.0001_initial... OK\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py shell\
+Python 3.7.1 (default, Nov  6 2018, 18:45:35)\
+Type 'copyright', 'credits' or 'license' for more information\
+IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.\
+\
+In [1]: Book.objects.create(name = "C Sharp", desc = "terrible book")\
+---------------------------------------------------------------------------\
+NameError                                 Traceback (most recent call last)\
+<ipython-input-1-6a617f5be312> in <module>\
+----> 1 Book.objects.create(name = "C Sharp", desc = "terrible book")\
+\
+NameError: name 'Book' is not defined\
+\
+In [2]: from apps.book_app.models import *\
+\
+In [3]: Book.objects.create(name = "C Sharp", desc = "terrible book")\
+Out[3]: <Book: Book object>\
+\
+In [4]: Book.objects.create(name = "Java", desc = "good book")\
+Out[4]: <Book: Book object>\
+\
+In [5]: Book.objects.create(name = "Python", desc = "great book")\
+Out[5]: <Book: Book object>\
+\
+In [6]: Book.objects.create(name = "PHP", desc = "obsolete book")\
+Out[6]: <Book: Book object>\
+\
+In [7]: Book.objects.create(name = "Ruby", desc = "ok book")\
+Out[7]: <Book: Book object>\
+\
+In [8]: Author.object.create(first_name = "Jane", last_name = "Austin", email = "jane@book.com")\
+---------------------------------------------------------------------------\
+AttributeError                            Traceback (most recent call last)\
+<ipython-input-8-61fcea7de169> in <module>\
+----> 1 Author.object.create(first_name = "Jane", last_name = "Austin", email = "jane@book.com")\
+\
+AttributeError: type object 'Author' has no attribute 'object'\
+\
+In [9]: Author.objects.create(first_name = "Jane", last_name = "Austin", email = "jane@book.com")\
+Out[9]: <Author: Author object>\
+\
+In [10]: Author.objects.create(first_name = "Emily", last_name = "Dickinson", email = "emily@book.com")\
+Out[10]: <Author: Author object>\
+\
+In [11]: Author.objects.create(first_name = "Fyodor", last_name = "Do", email = "fyodor@book.com")\
+Out[11]: <Author: Author object>\
+\
+In [12]: Author.objects.create(first_name = "William", last_name =" Shakespeare", email = "william@book.com")\
+Out[12]: <Author: Author object>\
+\
+In [13]: Author.objects.create(first_name = "Lau", last_name = "Tzu", email = "lau@book.com")\
+Out[13]: <Author: Author object>\
+\
+In [14]: exit()\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+You are trying to add a non-nullable field 'notes' to author without a default; we can't do that (the database needs something to populate existing rows).\
+Please select a fix:\
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)\
+ 2) Quit, and let me add a default in models.py\
+Select an option: 1\
+Please enter the default value now, as valid Python\
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now\
+Type 'exit' to exit this prompt\
+>>> "no value"\
+Migrations for 'book_app':\
+  apps/book_app/migrations/0002_author_notes.py:\
+    - Add field notes to author\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py migrate\
+Operations to perform:\
+  Apply all migrations: admin, auth, book_app, contenttypes, sessions\
+Running migrations:\
+  Rendering model states... DONE\
+  Applying book_app.0002_author_notes... OK\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py shell\
+Python 3.7.1 (default, Nov  6 2018, 18:45:35)\
+Type 'copyright', 'credits' or 'license' for more information\
+IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.\
+\
+In [1]: from apps.book_app.models import *\
+\
+In [2]: book = Book.objects.get(name = "C Sharp")\
+\
+In [3]: book\
+Out[3]: <Book: Book object>\
+\
+In [4]: book.__dict__\
+Out[4]:\
+\{'_state': <django.db.models.base.ModelState at 0x10746bb70>,\
+ 'id': 1,\
+ 'name': 'C Sharp',\
+ 'desc': 'terrible book',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501700, tzinfo=<UTC>)\}\
+\
+In [5]: book.name = "C #"\
+\
+In [6]: book.save()\
+\
+In [7]: book\
+Out[7]: <Book: Book object>\
+\
+In [8]: book.__dict__\
+Out[8]:\
+\{'_state': <django.db.models.base.ModelState at 0x10746bb70>,\
+ 'id': 1,\
+ 'name': 'C #',\
+ 'desc': 'terrible book',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}\
+\
+In [9]: author = Author.objects.get(id = 4)\
+\
+In [10]: author\
+Out[10]: <Author: Author object>\
+\
+In [11]: author.__dict__\
+Out[11]:\
+\{'_state': <django.db.models.base.ModelState at 0x10752aac8>,\
+ 'id': 4,\
+ 'first_name': 'William',\
+ 'last_name': ' Shakespeare',\
+ 'email': 'william@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27856, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27928, tzinfo=<UTC>)\}\
+\
+In [12]: author.name = Bill\
+---------------------------------------------------------------------------\
+NameError                                 Traceback (most recent call last)\
+<ipython-input-12-86449403a78b> in <module>\
+----> 1 author.name = Bill\
+\
+NameError: name 'Bill' is not defined\
+\
+In [13]: author.first_name = Bill\
+---------------------------------------------------------------------------\
+NameError                                 Traceback (most recent call last)\
+<ipython-input-13-8679c24e55d8> in <module>\
+----> 1 author.first_name = Bill\
+\
+NameError: name 'Bill' is not defined\
+\
+In [14]: author.first_name = "Bill"\
+\
+In [15]: author\
+Out[15]: <Author: Author object>\
+\
+In [16]: auhtor.__dict__\
+---------------------------------------------------------------------------\
+NameError                                 Traceback (most recent call last)\
+<ipython-input-16-f2cce123c5df> in <module>\
+----> 1 auhtor.__dict__\
+\
+NameError: name 'auhtor' is not defined\
+\
+In [17]: author.__dict__\
+Out[17]:\
+\{'_state': <django.db.models.base.ModelState at 0x10752aac8>,\
+ 'id': 4,\
+ 'first_name': 'Bill',\
+ 'last_name': ' Shakespeare',\
+ 'email': 'william@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27856, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27928, tzinfo=<UTC>)\}\
+\
+In [18]: author = Author.objects.get(id = 2)\
+\
+In [19]: author.__dict__\
+Out[19]:\
+\{'_state': <django.db.models.base.ModelState at 0x1075d78d0>,\
+ 'id': 2,\
+ 'first_name': 'Emily',\
+ 'last_name': 'Dickinson',\
+ 'email': 'emily@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}\
+\
+In [20]: book1 = Book.objects.get(id = 1)\
+\
+In [21]: book1.__dict__\
+Out[21]:\
+\{'_state': <django.db.models.base.ModelState at 0x107664fd0>,\
+ 'id': 1,\
+ 'name': 'C #',\
+ 'desc': 'terrible book',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}\
+\
+In [22]: book2 = Book.objects.get(id = 2)\
+\
+In [23]: book3 = Book.objects.get(id = 2)\
+\
+In [24]: book2 = Book.objects.get(id = 2)\
+\
+In [25]: book3 = book2 = Book.objects.get(id = 3)\
+\
+In [26]: book2.__dict__\
+Out[26]:\
+\{'_state': <django.db.models.base.ModelState at 0x1076adb00>,\
+ 'id': 3,\
+ 'name': 'Python',\
+ 'desc': 'great book',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248595, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248663, tzinfo=<UTC>)\}\
+\
+In [27]: book3.__dict__\
+Out[27]:\
+\{'_state': <django.db.models.base.ModelState at 0x1076adb00>,\
+ 'id': 3,\
+ 'name': 'Python',\
+ 'desc': 'great book',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248595, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248663, tzinfo=<UTC>)\}\
+\
+In [28]: book2 = Author.objects.get(id = 2)\
+\
+In [29]: book2.__dict__\
+Out[29]:\
+\{'_state': <django.db.models.base.ModelState at 0x1076ad2e8>,\
+ 'id': 2,\
+ 'first_name': 'Emily',\
+ 'last_name': 'Dickinson',\
+ 'email': 'emily@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}\
+\
+In [30]: book2 = Book.objects.get(id = 2)\
+\
+In [31]: book2.__dict__\
+Out[31]:\
+\{'_state': <django.db.models.base.ModelState at 0x1077426a0>,\
+ 'id': 2,\
+ 'name': 'Java',\
+ 'desc': 'good book',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376415, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376482, tzinfo=<UTC>)\}\
+\
+In [32]: author.author.add(book1,book2,book3)\
+\
+In [33]: author\
+Out[33]: <Author: Author object>\
+\
+In [34]: author.__dict__\
+Out[34]:\
+\{'_state': <django.db.models.base.ModelState at 0x1075d78d0>,\
+ 'id': 2,\
+ 'first_name': 'Emily',\
+ 'last_name': 'Dickinson',\
+ 'email': 'emily@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}\
+\
+In [35]: first_author = Author.objects.get(id = 2)\
+\
+In [36]: exit()\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py makemigrations\
+Did you rename author.author to author.books (a ManyToManyField)? [y/N] Y\
+Migrations for 'book_app':\
+  apps/book_app/migrations/0003_auto_20181210_2235.py:\
+    - Rename field author on author to books\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py migrat\
+Unknown command: 'migrat'\
+Type 'manage.py help' for usage.\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py migrate\
+Operations to perform:\
+  Apply all migrations: admin, auth, book_app, contenttypes, sessions\
+Running migrations:\
+  Rendering model states... DONE\
+  Applying book_app.0003_auto_20181210_2235... OK\
+(djangoPy3Env) Chis-MacBook-Air:Author_Book chinguyen$ python manage.py shell\
+Python 3.7.1 (default, Nov  6 2018, 18:45:35)\
+Type 'copyright', 'credits' or 'license' for more information\
+IPython 7.2.0 -- An enhanced Interactive Python. Type '?' for help.\
+\
+In [1]: from apps.book_app.models import *\
+\
+In [2]: author = Author.objects.get(id =2)\
+\
+In [3]: author.__dict__\
+Out[3]:\
+\{'_state': <django.db.models.base.ModelState at 0x10a7cf710>,\
+ 'id': 2,\
+ 'first_name': 'Emily',\
+ 'last_name': 'Dickinson',\
+ 'email': 'emily@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}\
+\
+In [4]: author.books.add(1,2,3)\
+\
+In [5]: author.books\
+Out[5]: <django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager at 0x10a7ce7f0>\
+\
+In [6]: author.books.__dict__\
+Out[6]:\
+\{'_constructor_args': ((<Author: Author object>,), \{\}),\
+ 'creation_counter': 17,\
+ 'model': apps.book_app.models.Book,\
+ 'name': None,\
+ '_db': None,\
+ '_hints': \{\},\
+ 'instance': <Author: Author object>,\
+ 'query_field_name': 'authors',\
+ 'prefetch_cache_name': 'books',\
+ 'source_field_name': 'author',\
+ 'target_field_name': 'book',\
+ 'symmetrical': False,\
+ 'through': apps.book_app.models.Author_books,\
+ 'reverse': False,\
+ 'source_field': <django.db.models.fields.related.ForeignKey: author>,\
+ 'target_field': <django.db.models.fields.related.ForeignKey: book>,\
+ 'core_filters': \{'authors__id': 2\},\
+ 'related_val': (2,)\}\
+\
+In [7]: author\
+Out[7]: <Author: Author object>\
+\
+In [8]: author.__dict__\
+Out[8]:\
+\{'_state': <django.db.models.base.ModelState at 0x10a7cf710>,\
+ 'id': 2,\
+ 'first_name': 'Emily',\
+ 'last_name': 'Dickinson',\
+ 'email': 'emily@book.com',\
+ 'notes': 'no value',\
+ 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>),\
+ 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}\
+\
+In [9]: author.books.all()\
+Out[9]: <QuerySet [<Book: Book object>, <Book: Book object>, <Book: Book object>]>\
+\
+In [10]: author.books.all().values()\
+Out[10]: <QuerySet [\{'id': 1, 'name': 'C #', 'desc': 'terrible book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}, \{'id': 2, 'name': 'Java', 'desc': 'good book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376415, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376482, tzinfo=<UTC>)\}, \{'id': 3, 'name': 'Python', 'desc': 'great book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248595, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248663, tzinfo=<UTC>)\}]>\
+\
+In [12]: first_author = Author.objects.get(id = 1)\
+\
+In [13]: first_author.books.add(1,2)\
+\
+In [14]: first.author.books.all().values()\
+---------------------------------------------------------------------------\
+\
+In [15]: first_author.books.all().values()\
+Out[15]: <QuerySet [\{'id': 1, 'name': 'C #', 'desc': 'terrible book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}, \{'id': 2, 'name': 'Java', 'desc': 'good book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376415, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376482, tzinfo=<UTC>)\}]>\
+\
+\
+In [17]: third_author = Author.objects.get(id = 3)\
+\
+In [18]: third_author.books.add(1,2,3,4)\
+\
+In [19]: third_author.books.all().values()\
+Out[19]: <QuerySet [\{'id': 1, 'name': 'C #', 'desc': 'terrible book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}, \{'id': 2, 'name': 'Java', 'desc': 'good book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376415, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376482, tzinfo=<UTC>)\}, \{'id': 3, 'name': 'Python', 'desc': 'great book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248595, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248663, tzinfo=<UTC>)\}, \{'id': 4, 'name': 'PHP', 'desc': 'obsolete book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 51, 66207, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 51, 66262, tzinfo=<UTC>)\}]>\
+\
+In [20]: fourth_author = Author.objects.get(id = 4)\
+\
+In [21]: fourth_author.books.add(1,2,3,4,5)\
+\
+In [22]: fourth_author.books.all()\
+Out[22]: <QuerySet [<Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>]>\
+\
+In [23]: fourth_author.books.all().values()\
+Out[23]: <QuerySet [\{'id': 1, 'name': 'C #', 'desc': 'terrible book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}, \{'id': 2, 'name': 'Java', 'desc': 'good book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376415, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376482, tzinfo=<UTC>)\}, \{'id': 3, 'name': 'Python', 'desc': 'great book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248595, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248663, tzinfo=<UTC>)\}, \{'id': 4, 'name': 'PHP', 'desc': 'obsolete book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 51, 66207, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 51, 66262, tzinfo=<UTC>)\}, \{'id': 5, 'name': 'Ruby', 'desc': 'ok book', 'created_at': datetime.datetime(2018, 12, 10, 22, 10, 28, 861267, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 10, 28, 861310, tzinfo=<UTC>)\}]>\
+\
+In [24]: thirdbook = Book.objects.get(id = 3)\
+\
+In [25]: thirdbook.authors.all()\
+Out[25]: <QuerySet [<Author: Author object>, <Author: Author object>, <Author: Author object>]>\
+\
+In [26]: thirdbook.authors.all().values()\
+Out[26]: <QuerySet [\{'id': 2, 'first_name': 'Emily', 'last_name': 'Dickinson', 'email': 'emily@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}, \{'id': 3, 'first_name': 'Fyodor', 'last_name': 'Do', 'email': 'fyodor@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 13, 54, 508044, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 13, 54, 508089, tzinfo=<UTC>)\}, \{'id': 4, 'first_name': 'William', 'last_name': ' Shakespeare', 'email': 'william@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27856, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27928, tzinfo=<UTC>)\}]>\
+\
+\
+In [28]: thirdbook.authors.remove(2)\
+\
+In [29]: thirdbook.authors.all().values()\
+Out[29]: <QuerySet [\{'id': 3, 'first_name': 'Fyodor', 'last_name': 'Do', 'email': 'fyodor@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 13, 54, 508044, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 13, 54, 508089, tzinfo=<UTC>)\}, \{'id': 4, 'first_name': 'William', 'last_name': ' Shakespeare', 'email': 'william@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27856, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27928, tzinfo=<UTC>)\}]>\
+\
+In [30]: secondbook = Book.objects.get(id = 2)\
+\
+In [31]: secondbook.authors.add(5)\
+\
+In [32]: secondbook.authors.all().values()\
+Out[32]: <QuerySet [\{'id': 2, 'first_name': 'Emily', 'last_name': 'Dickinson', 'email': 'emily@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698866, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 45, 698909, tzinfo=<UTC>)\}, \{'id': 1, 'first_name': 'Jane', 'last_name': 'Austin', 'email': 'jane@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 12, 1, 910232, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 12, 1, 910275, tzinfo=<UTC>)\}, \{'id': 3, 'first_name': 'Fyodor', 'last_name': 'Do', 'email': 'fyodor@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 13, 54, 508044, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 13, 54, 508089, tzinfo=<UTC>)\}, \{'id': 4, 'first_name': 'William', 'last_name': ' Shakespeare', 'email': 'william@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27856, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 15, 1, 27928, tzinfo=<UTC>)\}, \{'id': 5, 'first_name': 'Lau', 'last_name': 'Tzu', 'email': 'lau@book.com', 'notes': 'no value', 'created_at': datetime.datetime(2018, 12, 10, 22, 15, 33, 121823, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 15, 33, 121865, tzinfo=<UTC>)\}]>\
+\
+In [33]: author3 = Author.objects.get(id = 3)\
+\
+In [34]: author3.books.all().values()\
+Out[34]: <QuerySet [\{'id': 1, 'name': 'C #', 'desc': 'terrible book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 32, 501279, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 19, 58, 882873, tzinfo=<UTC>)\}, \{'id': 2, 'name': 'Java', 'desc': 'good book', 'created_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376415, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 8, 56, 376482, tzinfo=<UTC>)\}, \{'id': 3, 'name': 'Python', 'desc': 'great book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248595, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 25, 248663, tzinfo=<UTC>)\}, \{'id': 4, 'name': 'PHP', 'desc': 'obsolete book', 'created_at': datetime.datetime(2018, 12, 10, 22, 9, 51, 66207, tzinfo=<UTC>), 'updated_at': datetime.datetime(2018, 12, 10, 22, 9, 51, 66262, tzinfo=<UTC>)\}]>\
+\
+In [35]: fifthbook = Book.objects.get(id = 5)\
+\
+\
+In [37]: fifthbook.authors.all().values()}

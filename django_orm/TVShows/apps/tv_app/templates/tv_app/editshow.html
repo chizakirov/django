@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Edit Show</title>
+</head>
+<body>
+    <h1>Edit Show {{ show.id }}</h1>
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li class="text-danger">{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <form action="/shows/{{show.id}}/update" method = "post">
+        {% csrf_token %}
+        <p>Title<br>
+            <input type="text" name="title" value="{{show.title}}"></p>
+        <p>Network<br>
+        <input type="text" name="network" value="{{show.network}}"></p>
+        <p>Release Date<br>
+        <input type="date" name="release_date" value="{{ release_date }}"> </p>
+        <p>Description<br>
+        <input type="textarea" name="description" value="{{ show.description }}"></p>
+        <p><input type="submit" value="Update"></p>
+        <a href="/shows/{{show.id}}">Go to Show</a>
+    </form>
+    {{release_date}}
+</body>
+</html>

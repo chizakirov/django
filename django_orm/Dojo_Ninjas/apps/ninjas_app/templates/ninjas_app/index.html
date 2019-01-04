@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dojo Locations</h1>
+    <ul>
+        {% for dojo in dojos %}
+        <li>{{ dojo.name }}
+            <ul>
+                {% for ninja in dojo.ninjas.all %}
+                    <li><em>{{ ninja.first_name }} {{ ninja.last_name }} </em></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    <p>Ninja list</p>
+</body>
+</html>
